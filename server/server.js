@@ -1,22 +1,37 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
+const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// middleware
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// static assets
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+// home route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-});
+const startServer = async() => {
+    try{
+        await sequelize.authenticate();
+        app.listen(PORT, () => {
+            console.log(`API server running on port ${PORT}!`);
+        });
+    } catch(error) {
+        console.error('Unable to connect to the database:', error);
+    }
+}
+
+startServer();
