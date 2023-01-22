@@ -1,0 +1,26 @@
+{
+  "name": "webstore",
+  "version": "1.0.0",
+  "description": "Ecommerce webstore practice",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server --ignore client",
+    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianSmith46/Webstore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianSmith46/Webstore/issues"
+  },
+  "homepage": "https://github.com/ChristianSmith46/Webstore#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
