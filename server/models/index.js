@@ -5,7 +5,8 @@ const Category = require('./Category');
 const Order_Item = require('./Order_Item');
 
 User.hasMany(Order, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    as: 'orders'
 });
 
 Order.belongsTo(User, {
@@ -13,11 +14,13 @@ Order.belongsTo(User, {
 });
 
 Order.hasMany(Order_Item, {
-    foreignKey: 'order_id'
+    foreignKey: 'order_id',
+    as: 'items'
 });
 
 Category.hasMany(Product, {
-    foreignKey: 'category_id'
+    foreignKey: 'category_id',
+    as: 'products'
 });
 
 Product.belongsTo(Category, {
