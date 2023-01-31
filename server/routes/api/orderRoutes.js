@@ -4,8 +4,10 @@ const {
     getSingleUserOrder,
     createUserOrder
 } = require('../../controllers/orderController');
+const {authMiddleware} = require('../../utils/auth');
 
-router.route('/orders').get(getUserOrders).post(createUserOrder);
-router.route('/orders/:orderId').get(getSingleUserOrder);
+router.use(authMiddleware);
+router.route('/').get(getUserOrders).post(createUserOrder);
+router.route('/:orderId').get(getSingleUserOrder);
 
 module.exports = router;
