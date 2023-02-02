@@ -32,8 +32,8 @@ User.init(
             allowNull: false,
             validate: {
                 len: {
-                    args: [6, 16],
-                    msg: "Length must be 6-16 characters."
+                    args: [6, 32],
+                    msg: "Password length must be 6-32 characters."
                 }
             }
         },

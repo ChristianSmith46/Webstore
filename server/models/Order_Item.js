@@ -12,16 +12,16 @@ Order_Item.init(
             autoIncrement: true,
         },
         quantity: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             min: 0,
             defaultValue: 0
         },
         total_price: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.DECIMAL,
             allowNull: false
         },
         order_id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'order',
@@ -29,7 +29,7 @@ Order_Item.init(
             }
         },
         product_id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'product',

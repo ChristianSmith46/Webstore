@@ -23,17 +23,17 @@ Product.init(
             type: DataTypes.STRING
         },
         price: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.DECIMAL,
             allowNull: false,
             min: 0.99
         },
         quantity: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             min: 0,
             defaultValue: 0
         },
-        category: {
-            type: DataTypes.NUMBER,
+        category_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'category',

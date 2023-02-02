@@ -4,8 +4,9 @@ const {
     createUser,
     loginUser
 } = require('../../controllers/userController');
+const { authMiddleware } = require('../../utils/auth');
 
-router.route('/').get(getMe).post(createUser);
+router.route('/').get(authMiddleware, getMe).post(createUser);
 router.route('/login').post(loginUser);
 
 module.exports = router;
