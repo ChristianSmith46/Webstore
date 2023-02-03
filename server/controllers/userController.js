@@ -1,9 +1,16 @@
 const { signToken } = require('../utils/auth');
-const { User } = require('../models');
+const { User, Order } = require('../models');
 // TODO: Create logic for the userControllers
 module.exports = {
-    getMe(req, res) {
-        res.json("OK");
+    async getMe(req, res) {
+        try {
+            if(!req.user) return res.status(401).json({error: "No User Found"});
+            const user = await User.findByPk(req.user.id, {include: [{all: true}], attributes: {exclude: ['password']}});
+            if(!user) return res.status(401).json({error: "Database Error"});
+            return res.json(user.toJSON());
+        } catch (error) {
+            res.status(500);
+        }
     },
     async createUser(req, res) {
         try {
