@@ -7,8 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cart:hover {
+.navbar-nav a:hover {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.scaleup:hover {
+  transform: scale(1.1);
+}
+
+.underline {
+  border-bottom: 2px solid transparent;
+}
+.underline:hover {
+  border-bottom: 2px solid #ffffff8c;
 }
 
 code {

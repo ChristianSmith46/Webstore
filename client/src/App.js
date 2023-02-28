@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavLink } from 'react-bootstrap';
 
 function App() {
   return (
@@ -18,7 +18,17 @@ function App() {
               Spookeys
             </Navbar.Brand>
             <Nav className="justify-content-end">
-              <Nav.Link href="/cart" id='cart'>
+              <NavLink href='/account' className='scaleup'>
+                <img
+                  alt="account"
+                  src="/account.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{' '}
+                Account
+              </NavLink>
+              <Nav.Link href="/cart" className='scaleup'>
                 <img
                   alt="cart"
                   src="/cart.svg"
@@ -26,8 +36,16 @@ function App() {
                   height="30"
                   className="d-inline-block align-top"
                 />{' '}
-                Cart
+                Checkout
               </Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+        <Navbar sticky="top" bg="dark" variant="dark" style={{ padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
+          <Container fluid>
+            <Nav>
+              <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
+              <Nav.Link className='underline' href="/mousepads">Mousepads</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
