@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <Navbar sticky="top" bg="dark" variant="dark" style={{ padding: '10px' }}>
+          <Container fluid>
+            <Navbar.Brand href="/">
+              <img
+                alt="keyboard"
+                src="/keyboard.png"
+                width="32"
+                height="32"
+                className="d-inline-block align-top"
+              />{' '}
+              Spookeys
+            </Navbar.Brand>
+            <Nav className="justify-content-end">
+              <Nav.Link href="/cart" id='cart'>
+                <img
+                  alt="cart"
+                  src="/cart.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{' '}
+                Cart
+              </Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
       </header>
-    </div>
+      <main>
+
+      </main>
+      <footer>
+
+      </footer>
+    </>
   );
 }
 
