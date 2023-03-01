@@ -1,11 +1,11 @@
 import './App.css';
-import { Navbar, Nav, Container, NavLink } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavLink, Row, Stack, Col, Card } from 'react-bootstrap';
 
 function App() {
   return (
     <>
       <header>
-        <Navbar sticky="top" bg="dark" variant="dark" style={{ padding: '10px' }}>
+        <Navbar fixed="top" bg="dark" variant="dark" style={{ padding: '10px' }}>
           <Container fluid>
             <Navbar.Brand href="/">
               <img
@@ -40,17 +40,50 @@ function App() {
               </Nav.Link>
             </Nav>
           </Container>
+          {/* <Container fluid>
+            <Nav>
+              <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
+              <div className='vr bg-light' />
+              <Nav.Link className='underline' href="/mousepads">Mousepads</Nav.Link>
+            </Nav>
+          </Container> */}
         </Navbar>
-        <Navbar sticky="top" bg="dark" variant="dark" style={{ padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
+        <Navbar bg="dark" variant="dark" style={{ marginTop: '66px', padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
           <Container fluid>
             <Nav>
               <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
+              <div className='vr bg-light' />
               <Nav.Link className='underline' href="/mousepads">Mousepads</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
       </header>
       <main>
+        {/* <Container fluid> */}
+        <Row>
+          <Col md={8}>
+            <Card className="bg-dark text-white">
+              <Card.Img src="/tokyo60.webp" alt="Tokyo60 Keyboard" height='auto' />
+              <Card.ImgOverlay>
+                <Card.Title>Tokyo60</Card.Title>
+              </Card.ImgOverlay>
+              <Card.Body>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Stack>
+              <div className="bg-light border">First item</div>
+              <div className="bg-light border">Second item</div>
+              <div className="bg-light border">Third item</div>
+            </Stack>
+          </Col>
+        </Row>
+        {/* </Container> */}
 
       </main>
       <footer>
