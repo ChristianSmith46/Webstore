@@ -40,15 +40,8 @@ function App() {
               </Nav.Link>
             </Nav>
           </Container>
-          {/* <Container fluid>
-            <Nav>
-              <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
-              <div className='vr bg-light' />
-              <Nav.Link className='underline' href="/mousepads">Mousepads</Nav.Link>
-            </Nav>
-          </Container> */}
         </Navbar>
-        <Navbar bg="dark" variant="dark" style={{ marginTop: '66px', padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
+        <Navbar fixed='top' bg="dark" variant="dark" style={{ marginTop: '66px', padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
           <Container fluid>
             <Nav>
               <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
@@ -58,7 +51,7 @@ function App() {
           </Container>
         </Navbar>
       </header>
-      <main>
+      <main style={{marginTop: '110px'}}>
         {/* <Container fluid> */}
         <Row>
           <Col md={8}>
