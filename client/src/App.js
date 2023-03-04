@@ -56,7 +56,7 @@ function App() {
         <Row>
           <Col md={8}>
             <Card className="bg-dark text-white">
-              <Card.Img src="/tokyo60.webp" alt="Tokyo60 Keyboard" height='auto' />
+              <Card.Img src="/tokyo60.webp" alt="Tokyo60 Keyboard" height='650px' />
               <Card.ImgOverlay>
                 <Card.Title>Tokyo60</Card.Title>
               </Card.ImgOverlay>
@@ -69,10 +69,31 @@ function App() {
             </Card>
           </Col>
           <Col>
-            <Stack>
-              <div className="bg-light border">First item</div>
-              <div className="bg-light border">Second item</div>
-              <div className="bg-light border">Third item</div>
+            <Stack height='706px'>
+            <Card className="bg-dark text-white">
+              <Card.Img src="/tofu60.webp" alt="Tofu60 Keyboard" height='300px' />
+              <Card.ImgOverlay>
+                <Card.Title>Tofu60</Card.Title>
+              </Card.ImgOverlay>
+              <Card.Body>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="bg-dark text-white">
+              <Card.Img src="/GH60.webp" alt="GH60 Keyboard" height='300px' />
+              <Card.ImgOverlay>
+                <Card.Title>GH60</Card.Title>
+              </Card.ImgOverlay>
+              <Card.Body>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
             </Stack>
           </Col>
         </Row>
