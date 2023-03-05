@@ -71,7 +71,7 @@ function App() {
           <Col>
             <Stack height='706px'>
             <Card className="bg-dark text-white">
-              <Card.Img src="/tofu60.webp" alt="Tofu60 Keyboard" height='300px' />
+              <Card.Img src="/tofu60.webp" alt="Tofu60 Keyboard" height='272px' />
               <Card.ImgOverlay>
                 <Card.Title>Tofu60</Card.Title>
               </Card.ImgOverlay>
@@ -83,7 +83,7 @@ function App() {
               </Card.Body>
             </Card>
             <Card className="bg-dark text-white">
-              <Card.Img src="/GH60.webp" alt="GH60 Keyboard" height='300px' />
+              <Card.Img src="/GH60.webp" alt="GH60 Keyboard" height='272px' />
               <Card.ImgOverlay>
                 <Card.Title>GH60</Card.Title>
               </Card.ImgOverlay>
