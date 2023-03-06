@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Nav, Container, NavLink, Row, Stack, Col, Card } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavLink, Row, Stack, Col, Card, Button } from 'react-bootstrap';
 
 function App() {
   return (
@@ -61,6 +61,7 @@ function App() {
                 <Card.Title>Tokyo60</Card.Title>
               </Card.ImgOverlay>
               <Card.Body>
+              <Button>Add To Cart</Button>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
@@ -76,6 +77,7 @@ function App() {
                 <Card.Title>Tofu60</Card.Title>
               </Card.ImgOverlay>
               <Card.Body>
+                <Button>Add To Cart</Button>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
@@ -88,6 +90,7 @@ function App() {
                 <Card.Title>GH60</Card.Title>
               </Card.ImgOverlay>
               <Card.Body>
+              <Button>Add To Cart</Button>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
