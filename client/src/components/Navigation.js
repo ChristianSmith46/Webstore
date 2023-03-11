@@ -1,12 +1,13 @@
 import React from 'react';
 import { Navbar, Nav, Container, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
         <>
             <Navbar fixed="top" bg="dark" variant="dark" style={{ padding: '10px' }}>
                 <Container fluid>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand as={Link} to="/">
                         <img
                             alt="keyboard"
                             src="/keyboard.png"
@@ -17,7 +18,7 @@ function Navigation() {
                         Spookeys
                     </Navbar.Brand>
                     <Nav className="justify-content-end">
-                        <NavLink href='/account' className='scaleup'>
+                        <NavLink as={Link} to='/account' className='scaleup'>
                             <img
                                 alt="account"
                                 src="/account.svg"
@@ -27,7 +28,7 @@ function Navigation() {
                             />{' '}
                             Account
                         </NavLink>
-                        <Nav.Link href="/cart" className='scaleup'>
+                        <Nav.Link as={Link} to="/cart" className='scaleup'>
                             <img
                                 alt="cart"
                                 src="/cart.svg"
@@ -43,9 +44,9 @@ function Navigation() {
             <Navbar fixed='top' bg="dark" variant="dark" style={{ marginTop: '66px', padding: '0px 10px 0px', borderTop: '1px solid white', borderBottom: '1px solid white' }}>
                 <Container fluid>
                     <Nav>
-                        <Nav.Link className='underline' href="/keyboards">Keyboards</Nav.Link>
+                        <Nav.Link className='underline' as={Link} to="/keyboards">Keyboards</Nav.Link>
                         <div className='vr bg-light' />
-                        <Nav.Link className='underline' href="/mousepads">Mousepads</Nav.Link>
+                        <Nav.Link className='underline' as={Link} to="/mousepads">Mousepads</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
