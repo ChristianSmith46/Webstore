@@ -19,7 +19,7 @@ module.exports = {
             const token = signToken({ first_name, email, id });
             return res.json({ token });
         } catch (error) {
-            return res.status(500).json({ error: error.errors[0].message });
+            return res.status(500).json({ error });
         }
     },
     async loginUser(req, res) {

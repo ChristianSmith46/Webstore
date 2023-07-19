@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 const startServer = async() => {
     try{
         await sequelize.authenticate();
+        await sequelize.sync();
         app.listen(PORT, () => {
             console.log(`API server running on port ${PORT}!`);
         });
