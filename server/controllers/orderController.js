@@ -1,9 +1,18 @@
-const { User, Order } = require("../models");
+const { User, Order, Order_Item } = require("../models");
 
 // TODO: Create logic for the orderControllers
 module.exports = {
-    getUserOrders(req, res) {
-        res.json("OK");
+    async getUserOrders(req, res) {
+        if (!req.user) return res.status(401);
+        try {
+            const orders = await Order.findAll({where: {user_id: req.user.id}, include: [{model: Order_Item, as: 'items'}]});
+            if (!orders) return res.status(401).json({ error: "Can't find any orders" });
+            if (orders.length < 1) return res.json([]);
+            return res.json(orders.toJSON());
+        } catch (error) {
+            console.error(error);
+            return res.status(500).json({error: "Couldn't get orders"});
+        }
     },
     getSingleUserOrder(req, res) {
         res.json("OK");
